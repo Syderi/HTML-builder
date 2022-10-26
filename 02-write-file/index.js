@@ -13,7 +13,7 @@ console.log('Please typing text: ')
 r1.on('line', (input) => {
 
     if (input !== 'exit') {
-        fs.appendFile(path.join(__dirname, 'text.txt'), `${input} `, () => {
+        fs.appendFile(path.resolve(__dirname, 'text.txt'), `${input} `, () => {
         })
         console.log('...');
     }

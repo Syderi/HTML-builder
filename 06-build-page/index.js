@@ -52,7 +52,7 @@ const createStyle = async () => {
                     stream.on('readable', () => {
                         let text = stream.read()
                         if (text) {
-                            fs.appendFile(path.resolve(__dirname, 'project-dist', 'style.css'), text.toString('utf8'), (err) => {
+                            fs.appendFile(path.resolve(__dirname, 'project-dist', 'style.css'), `\n${text.toString('utf8')}`, (err) => {
                                 if (err) throw err;
                             });
                         }
